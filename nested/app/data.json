@@ -1,0 +1,8 @@
+{
+    "name": "Jane Doe",
+    "age": 30,
+    "address": {
+        "city": "Seattle",
+        "state": "WA"
+    }
+}
