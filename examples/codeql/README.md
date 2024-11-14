@@ -25,4 +25,8 @@ codeql database analyze testdotnetdb/ --format=csv --output=codeql.extended.resu
     ~/repos/github/github/codeql/csharp/ql/src/codeql-suites/csharp-security-extended.qls \
     --rerun
 
+# query alerts (results):
+#  warning - ASP.NET config file enables directory browsing
+#  error - Missing X-Frame-Options HTTP header
+
 ```
