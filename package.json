@@ -4,6 +4,7 @@
   "main": "index.js",
   "description": "my internal, refactored web application",
   "dependencies": {
-    "@hapi/hapi": "^21.3.12"
+    "@hapi/hapi": "^21.3.12",
+    "express": "^4.21.2"
   }
 }
