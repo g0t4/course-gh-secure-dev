@@ -12,7 +12,7 @@ curl -sSL --request POST \
     --header "Authorization: Bearer $(cat tmp/current.jwt)" \
     --header "X-GitHub-Api-Version: 2022-11-28" \
     https://api.github.com/app/installations/$install_id/access_tokens \
-    | jq -r .token > install_token.txt
+    | jq -r .token > tmp/install_access_token
 
 
 
