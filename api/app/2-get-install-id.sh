@@ -5,8 +5,9 @@ curl -sSL --request GET \
     --header "Accept: application/vnd.github+json" \
     --header "Authorization: Bearer $(cat current.jwt)" \
     --header "X-GitHub-Api-Version: 2022-11-28" \
-    https://api.github.com/app/installations |
-    jq ".[] | {id, app_slug}"
+    https://api.github.com/app/installations \
+    | jq ".[] | {id, app_slug}"
+
 # review app installs
 # save install_id to file:
 
