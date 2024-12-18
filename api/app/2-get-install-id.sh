@@ -6,7 +6,7 @@ curl -sSL --request GET \
     --header "Authorization: Bearer $(cat tmp/current.jwt)" \
     --header "X-GitHub-Api-Version: 2022-11-28" \
     https://api.github.com/app/installations \
-    | jq ".[] | {id, app_slug}"
+    | jq ".[] | {id, app_slug, login: .account.login, type, permissions }"
 
 # review app installs
 # save install_id to tmp/install_id
