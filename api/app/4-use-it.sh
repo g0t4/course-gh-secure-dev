@@ -10,6 +10,8 @@ curl -sSL --request GET \
     -H "Authorization: Bearer $install_token" \
     https://api.github.com/installation/repositories
 
+# jq ".repositories.[] | { id, full_name, private }"
+
 # make sure one of repos is private to convey access isn't just to a public repo
 
 # # can use w/ GH cli
