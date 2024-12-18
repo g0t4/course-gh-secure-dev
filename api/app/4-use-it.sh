@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+install_token=$(cat tmp/install_access_token)
+
 # USE TOKEN
 # List Repos the Install Has Access To
 curl -sSL --request GET \
@@ -10,12 +12,7 @@ curl -sSL --request GET \
 
 # make sure one of repos is private to convey access isn't just to a public repo
 
-
-# can use w/ GH cli
-GH_TOKEN=(echo $install_token)  gh api graphql -f query='query { viewer { login } }'
-GH_TOKEN=(echo $install_token)  gh auth status
-echo $install_token | gh auth login --with-token
-
-
-
-
+# # can use w/ GH cli
+#   GH_TOKEN=(echo $install_token)  gh api graphql -f query='query { viewer { login } }'
+#   GH_TOKEN=(echo $install_token)  gh auth status
+#   echo $install_token | gh auth login --with-token
