@@ -4,7 +4,7 @@
 
 set -o pipefail
 
-client_id=$( cat tmp/clientid )
+client_id=$( cat tmp/client_id )
 private_key=$( cat tmp/private-key.pem )
 
 now=$(date +%s)
