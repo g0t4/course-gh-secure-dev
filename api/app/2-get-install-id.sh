@@ -10,6 +10,7 @@ curl -sSL --request GET \
 
 # review app installs
 # save install_id to tmp/install_id
+# pbpaste > tmp/install_id
 
 ## other things to try:
 #
