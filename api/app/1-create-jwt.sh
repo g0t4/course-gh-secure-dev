@@ -4,8 +4,8 @@
 
 set -o pipefail
 
-client_id=$( cat clientid.txt )
-private_key=$( cat private-key.pem )
+client_id=$( cat tmp/clientid )
+private_key=$( cat tmp/private-key.pem )
 
 now=$(date +%s)
 iat=$((${now} - 60)) # Issues 60 seconds in the past
@@ -40,4 +40,4 @@ signature=$(
 JWT="${header_payload}"."${signature}"
 printf '%s\n' "JWT: $JWT"
 
-echo -n $JWT > current.jwt
+echo -n $JWT > tmp/current.jwt
