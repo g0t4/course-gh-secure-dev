@@ -7,7 +7,7 @@ client_id=$(cat tmp/client_id)
 # 1 - request device flow codes
 # scopes https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps
 curl -sSL -X POST https://github.com/login/device/code \
-    -d "client_id=$client_id" -d "scope=repo" \
+    -d "client_id=$client_id" -d "scope=repo read:org" \
     -H "Accept: application/json" >tmp/code_response.json
 
 device_code=$(jq -r .device_code <tmp/code_response.json)
